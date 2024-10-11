@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -12,44 +12,87 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex justify-center space-x-8">
-        {/* Home */}
+    <nav className="bg-slate-300 p-8 opacity-95   sticky top-0 rounded-3xl shadow-2xl  m-2">
+      <ul className="flex justify-center  font-extrabold  space-x-8">
         <li className="relative">
-          <a href="/" className="text-white hover:text-gray-300">Home</a>
+          <a href="/" className="text-black hover:text-gray-600">
+            Home
+          </a>
         </li>
 
-        {/* Services */}
-        <li 
+        <li
           className="relative"
-          onMouseEnter={() => handleMouseEnter(5)}
+          onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/" className="text-white hover:text-gray-300">Services</a>
-          <ul className={`absolute top-full left-0 bg-gray-700 text-white mt-2 py-2 w-48 rounded-lg ${activeDropdown === 1 ? 'block' : 'hidden'}`}>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">Web Development</a></li>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">App Development</a></li>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">SEO</a></li>
+          <a href="/" className="text-black hover:text-gray-600">
+            Services
+          </a>
+          <ul
+            className={`absolute top-full left-0 bg-black text-white mt-0 py-2 w-48 rounded-lg z-10 transition-opacity duration-300 ease-in-out ${
+              activeDropdown === 1
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}
+          >
+            <li className="px-4 py-2 hover:bg-gray-600">
+              <a href="#services">Web Development</a>
+            </li>
           </ul>
         </li>
 
-        {/* Products */}
-        <li 
+        <li
           className="relative"
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/" className="text-white hover:text-gray-300">Products</a>
-          <ul className={`absolute top-full left-0 bg-gray-700 text-white mt-2 py-2 w-48 rounded-lg ${activeDropdown === 2 ? 'block' : 'hidden'}`}>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">Product 1</a></li>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">Product 2</a></li>
-            <li className="px-4 py-2 hover:bg-gray-600"><a href="/">Product 3</a></li>
+          <a href="#products" className="text-black hover:text-gray-600">
+            Products
+          </a>
+          <ul
+            className={`absolute top-full left-0 bg-black text-white mt-0 py-2 w-48 rounded-lg z-10 transition-opacity duration-300 ease-in-out ${
+              activeDropdown === 2
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}
+          >
+            <li className="px-4 py-2 hover:bg-gray-600">
+              <a href="/">Product 1</a>
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-600">
+              <a href="/">Product 2</a>
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-600">
+              <a href="/">Product 3</a>
+            </li>
           </ul>
         </li>
 
-        {/* Contact */}
+        <li
+          className="relative"
+          onMouseEnter={() => handleMouseEnter(3)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <a href="/" className="text-black hover:text-gray-600">
+            About
+          </a>
+          <ul
+            className={`absolute top-full left-0 bg-black text-white mt-0 py-2 w-48 rounded-lg z-10 transition-opacity duration-300 ease-in-out ${
+              activeDropdown === 3
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}
+          >
+            <li className="px-4 py-2 hover:bg-gray-600">
+              <a href="/">Our Team</a>
+            </li>
+          </ul>
+        </li>
+
         <li className="relative">
-          <a href="/" className="text-white hover:text-gray-300">Contact</a>
+          <a href="/" className="text-black hover:text-gray-600">
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
