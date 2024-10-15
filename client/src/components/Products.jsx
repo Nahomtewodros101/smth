@@ -56,7 +56,7 @@ const Products = () => {
     <section
       ref={sectionRef}
       id="products"
-      className="flex flex-col h-[100vh] items-center justify-center gap-[5rem] bg-[#eae8e0]"
+      className="flex flex-col h-[100vh] items-center justify-center gap-[5rem] bg-gradient-to-l from-slate-500 to-[#bcae79]"
     >
       <h2 className="text-4xl font-bold mb-10">Our Products</h2>
       <div className="flex flex-row items-center justify-center gap-[8rem]">

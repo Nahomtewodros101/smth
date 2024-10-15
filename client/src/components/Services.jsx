@@ -35,7 +35,7 @@ const Services = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="flex flex-col items-center justify-center h-[100vh] bg-slate-300 p-10 space-y-10"
+      className="flex flex-col items-center justify-center h-[100vh] bg-gradient-to-l from-slate-500 to-[#bcae79] p-10 space-y-10"
     >
       <h2 className="text-4xl font-bold mb-8">Our Services Include</h2>
       <div className="flex flex-wrap justify-center gap-[10rem]">

@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#eae8e0] h-[100px] p-2 opacity-95  scroll-smooth sticky top-4 rounded-3xl z-50 shadow-2xl  m-4">
+    <nav className="bg-gradient-to-b from-slate-400  h-[100px] p-2 opacity-95  scroll-smooth sticky top-4 rounded-3xl z-50 shadow-2xl  m-4">
       <div>
         <li className="list-none">
           <img

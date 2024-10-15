@@ -45,9 +45,9 @@ const OurTeam = () => {
   }, []);
 
   return (
-    <section id="team" ref={sectionRef} className="bg-slate-200 py-20">
+    <section id="team" ref={sectionRef} className="bg-gradient-to-r from-slate-500 to-[#bcae79] py-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold">Meet Our Team!</h1>
+        <h1 className="text-4xl font-bold mt-10">Meet Our Team!</h1>
       </div>
 
       <div className="flex justify-center gap-[8rem] mb-16">
