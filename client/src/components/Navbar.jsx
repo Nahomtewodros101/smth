@@ -58,7 +58,7 @@ const Navbar = () => {
         </li>
 
         <li className="relative">
-          <a href="/login" className="text-black hover:text-gray-600">
+          <a href="#contact" className="text-black hover:text-gray-600">
             Contact
           </a>
         </li>

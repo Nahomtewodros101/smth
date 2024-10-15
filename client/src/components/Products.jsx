@@ -24,17 +24,29 @@ const Products = () => {
   };
 
   useEffect(() => {
+    const productCards = [
+      pro2Ref.current,
+      proRef.current,
+      pro3Ref.current,
+      pro4Ref.current,
+    ];
+
     gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
+      productCards,
+      { opacity: 0, y: 50, scale: 0.8 },
       {
         opacity: 1,
         y: 0,
+        scale: 1,
+        stagger: 0.2, // Adds delay between each product animation
+        duration: 1.5,
+        ease: "power3.out", // Smooth easing effect
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 60%",
-          end: "bottom 40%",
-          toggleActions: "play none none reverse",
+          start: "top 80%", // Animation starts when section reaches 80% from the top of the viewport
+          end: "top 20%", // Animation ends when it's 20% from the top
+          scrub: true, // Animations follow scroll progression
+          toggleActions: "play none none reverse", // Reverses on scrolling back
         },
       }
     );
