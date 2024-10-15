@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import image1 from "../components/images/CREATE.png";
 import image2 from "../components/images/Computer Program Clipart Transparent PNG Hd, Programming And Web Technology Vector With Computer Illustration, Classic, Web, Development PNG Image For Free Download.jfif";
+import image3 from "../components/images/qa.jpg";
 import { gsap } from "gsap";
 
 const Services = () => {
   const img1Ref = useRef(null);
   const img2Ref = useRef(null);
+  const img3Ref = useRef(null);
   const sectionRef = useRef(null);
 
   const handleMouseEnter = (ref) => {
@@ -72,6 +74,22 @@ const Services = () => {
             <p className="text-gray-600">
               Elegant and Appeling Modern Webapps For any Organizations
             </p>
+          </div>
+        </div>
+        <div
+          ref={img3Ref}
+          className="bg-white rounded-xl shadow-lg transition-transform duration-300 ease-in-out overflow-hidden"
+          onMouseEnter={() => handleMouseEnter(img3Ref)}
+          onMouseLeave={() => handleMouseLeave(img3Ref)}
+        >
+          <img
+            className="h-[18rem] w-full object-cover"
+            src={image3}
+            alt="Service 2"
+          />
+          <div className="p-5">
+            <h3 className="text-xl font-semibold">QA`s</h3>
+            <p className="text-gray-600">Quality Assurance Services</p>
           </div>
         </div>
       </div>

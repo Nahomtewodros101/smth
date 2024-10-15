@@ -6,9 +6,9 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.use(express.json());
-dotenv.config(); // Ensure this is before using process.en
+dotenv.config();
 
-const port = process.env.PORT; // Fallback to 5000 if PORT is undefined
+const port = process.env.PORT; 
 
 app.listen(port, () => {
   console.log(`server running on ${port}`);

@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProductCard from "../utils/ProductCard";
 import ProductCard2 from "../utils/ProductCard2";
 import ProductCard3 from "../utils/ProductCard3";
+import ProductCard4 from "../utils/ProductCard4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,7 @@ const Products = () => {
   const proRef = useRef(null);
   const pro2Ref = useRef(null);
   const pro3Ref = useRef(null);
+  const pro4Ref = useRef(null);
 
   const handleMouseEnter = (ref) => {
     gsap.to(ref.current, { scale: 1.5, duration: 0.5 });
@@ -60,6 +62,11 @@ const Products = () => {
           ref={pro3Ref}
           onMouseEnter={() => handleMouseEnter(pro3Ref)}
           onMouseLeave={() => handleMouseLeave(pro3Ref)}
+        />
+        <ProductCard4
+          ref={pro4Ref}
+          onMouseEnter={() => handleMouseEnter(pro4Ref)}
+          onMouseLeave={() => handleMouseLeave(pro4Ref)}
         />
       </div>
     </section>
