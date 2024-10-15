@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
-import product2 from "../components/images/Untitled design (6).png";
+import green from '../components/images/Untitled design (7).png'
 
-const ProductCard2 = forwardRef(({ onMouseEnter, onMouseLeave }, ref) => {
+const ProductCard3 = forwardRef(({ onMouseEnter, onMouseLeave }, ref) => {
   return (
     <div
       ref={ref}
@@ -11,18 +11,18 @@ const ProductCard2 = forwardRef(({ onMouseEnter, onMouseLeave }, ref) => {
     >
       <img
         className="w-full h-48 object-cover"
-        src={product2}
+        src={green}
         alt="Product"
-        id="Product-2"
+        id="Product-1"
       />
       <div className="p-5 bg-slate-300">
-        <h2 className="text-xl font-bold mb-2">Get Moving</h2>
+        <h2 className="text-xl font-bold mb-2">Green Grillers</h2>
         <p className="text-gray-700 mb-4 font-semibold">
-          A webapp made for a workout plan app also made by us
+          A website made for an Enviornmental Frendly Diet Company
         </p>
       </div>
     </div>
   );
 });
 
-export default ProductCard2;
+export default ProductCard3;

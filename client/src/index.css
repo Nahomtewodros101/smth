@@ -3,6 +3,17 @@
 @tailwind utilities;
 /* globbally scrollingu smooth nw */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
   }
-  
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}

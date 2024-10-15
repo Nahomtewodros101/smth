@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo from "../components/images/Untitled (4).png";
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -12,10 +12,23 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#eae8e0] p-8 opacity-95  scroll-smooth sticky top-5 rounded-3xl z-50 shadow-2xl  m-4">
-      <ul className="flex justify-center  font-extrabold  space-x-8">
+    <nav className="bg-[#eae8e0] h-[100px] p-2 opacity-95  scroll-smooth sticky top-4 rounded-3xl z-50 shadow-2xl  m-4">
+      <div>
+        <li className="list-none">
+          <img
+            src={logo}
+            alt="logo"
+            width={150}
+            className="rounded-full mx-20 translate-y-2 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 overflow-hidden"
+          />
+        </li>
+      </div>
+      <ul className="flex justify-center font-extrabold  pb-5 space-x-8">
         <li className="relative">
-          <a href="/" className="text-black hover:text-gray-600">
+          <a
+            href="#home"
+            className="text-black scroll-smooth hover:text-gray-600"
+          >
             Home
           </a>
         </li>
@@ -39,20 +52,9 @@ const Navbar = () => {
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/" className="text-black hover:text-gray-600">
-            About
+          <a href="#team" className="text-black hover:text-gray-600">
+            Team
           </a>
-          <ul
-            className={`absolute top-full left-0 bg-black text-white mt-0 py-2 w-48 rounded-lg z-10 transition-opacity duration-300 ease-in-out ${
-              activeDropdown === 3
-                ? "opacity-100 visible"
-                : "opacity-0 invisible"
-            }`}
-          >
-            <li className="px-4 py-2 hover:bg-gray-600">
-              <a href="/">Our Team</a>
-            </li>
-          </ul>
         </li>
 
         <li className="relative">
